@@ -1,0 +1,6 @@
+.python-version
+*.code-workspace
+
+*.pyc
+
+db.sqlite3
