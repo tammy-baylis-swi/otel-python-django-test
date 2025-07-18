@@ -3,15 +3,9 @@
 import os
 import sys
 
-from opentelemetry.instrumentation.django import DjangoInstrumentor
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'otel-site.settings')
-
-    # "All that's needed" to instrument Django with OTEL
-    # https://github.com/open-telemetry/opentelemetry-python/tree/main/docs/examples/django
-    DjangoInstrumentor().instrument()
 
     try:
         from django.core.management import execute_from_command_line
